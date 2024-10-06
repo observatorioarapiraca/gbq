@@ -1,0 +1,6 @@
+pandas
+plotly
+streamlit
+pandas_gbq
+google.cloud
+google.oauth2
