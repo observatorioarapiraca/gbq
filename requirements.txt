@@ -1,7 +1,6 @@
 pandas
 plotly
 streamlit
-pandas_gbq
+pandas-gbq
 google-cloud-bigquery
 google-auth
-google-auth-oauthlib
