@@ -4,11 +4,13 @@ from google.oauth2 import service_account
 import pandas_gbq
 import streamlit as st
 
+# Passo 1: Acessar as credenciais do arquivo secrets.toml
+credentials_info = st.secrets["GOOGLE_APPLICATION_CREDENTIALS_JSON"]
 
-key_path = st.secrets['GOOGLE_APPLICATION_CREDENTIALS_JSON']
-
-credentials = service_account.Credentials.from_service_account_file(
-              key_path, scopes = ["https://www.googleapis.com/auth/cloud-platform"])
+# Passo 2: Criar um objeto de credenciais a partir das variáveis de ambiente
+credentials = service_account.Credentials.from_service_account_info(
+    credentials_info, scopes=["https://www.googleapis.com/auth/cloud-platform"]
+)
 
 client = bigquery.Client(credentials = credentials, project = 'prefeitura-437123')
 
