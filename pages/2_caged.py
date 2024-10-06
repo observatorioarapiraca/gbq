@@ -5,7 +5,7 @@ import pandas_gbq
 import streamlit as st
 
 
-key_path = st.secrets(['GOOGLE_APPLICATION_CREDENTIALS_JSON'])
+key_path = st.secrets['GOOGLE_APPLICATION_CREDENTIALS_JSON']
 
 credentials = service_account.Credentials.from_service_account_file(
               key_path, scopes = ["https://www.googleapis.com/auth/cloud-platform"])
