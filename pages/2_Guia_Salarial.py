@@ -124,7 +124,7 @@ fig.update_layout(
     xaxis_title='',  # Título do eixo X
     yaxis_title='',   # Título do eixo Y
     yaxis_tickprefix='R$ ',
-    height=350,
+    height=330,
     xaxis=dict(tickfont=dict(size=16)),  # Aumentar tamanho do texto do eixo X
     yaxis=dict(tickfont=dict(size=16)),
 )
@@ -163,7 +163,7 @@ fig.update_layout(
     xaxis_title='',  # Título do eixo X
     yaxis_title='',   # Título do eixo Y
     yaxis_tickprefix='R$ ',
-    height=350,
+    height=330,
     xaxis_tickangle=-15,
     xaxis=dict(tickfont=dict(size=16)),  # Aumentar tamanho do texto do eixo X
     yaxis=dict(tickfont=dict(size=16)),
