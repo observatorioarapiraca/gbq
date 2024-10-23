@@ -17,7 +17,7 @@ st.subheader('Conceitos Importantes')
 st.write("""
 **Saldo de Emprego**: O saldo de emprego reflete a diferença entre o número de admissões e desligamentos formais em um determinado período. 
 Quando o saldo é positivo, significa que mais pessoas foram contratadas do que demitidas, apontando para uma expansão no mercado de trabalho. 
-Se o saldo for negativo, indica que houve mais demissões do que contratações, sugerindo retração no emprego.
+Se o saldo for negativo, indica que houve mais demissões do que contratações, o que resulta em retração no emprego.
 """)
 
 st.write("""
