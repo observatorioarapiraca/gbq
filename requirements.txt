@@ -4,3 +4,5 @@ streamlit
 pandas-gbq
 google-cloud-bigquery
 google-auth
+datetime
+numpy
