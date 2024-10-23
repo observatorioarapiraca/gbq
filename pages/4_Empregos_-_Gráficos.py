@@ -63,7 +63,7 @@ df_grafico_cbo.index = pd.to_datetime(df_grafico_cbo.index, format='%Y-%m')
 date_range = pd.date_range(start=df_grafico['competênciamov'].min(), end=df_grafico['competênciamov'].max(), freq='MS')  
 df_grafico_cbo = df_grafico_cbo.reindex(date_range)
 df_grafico_cbo['saldo'] = df_grafico_cbo['saldo'].fillna(0)
-df_grafico_cbo['estoque_acumulado'] = df_grafico_cbo['estoque_acumulado'].fillna(method='ffill')
+df_grafico_cbo['estoque_acumulado'] = df_grafico_cbo['estoque_acumulado'].ffill() # forward fill
 # regra para pegar o ultimo valor nao nan e preencher a coluna estoque, util para quando os primeiros meses nao tem saldo e o estoque seria 0 
 first_valid_value = df_grafico_cbo['estoque_acumulado'].iloc[0]
 if pd.isnull(first_valid_value):
@@ -85,7 +85,7 @@ fig1.update_layout(
     xaxis_title='',  # Título do eixo X
     yaxis_title='',   # Título do eixo Y
     yaxis_tickprefix='',
-    height=350,
+    height=330,
     xaxis=dict(tickfont=dict(size=16)),  # Aumentar tamanho do texto do eixo X
     yaxis=dict(tickfont=dict(size=16)),
 )
@@ -99,7 +99,7 @@ fig2.update_layout(
     xaxis_title='',  # Título do eixo X
     yaxis_title='',   # Título do eixo Y
     yaxis_tickprefix='',
-    height=350,
+    height=330,
     xaxis=dict(tickfont=dict(size=16)),  # Aumentar tamanho do texto do eixo X
     yaxis=dict(tickfont=dict(size=16)),
 )
