@@ -18,10 +18,7 @@ st.set_page_config(page_title='Guia Salarial', layout='wide')
 st.sidebar.markdown("### Fonte", help=f"""Até {ultimo_ano_rais}: RAIS.  
                                          Após {ultimo_ano_rais}: CAGED.""")
 
-
-
-anos_rais = ['2020','2021','2022']
-anos = [2020,2021,2022,2023,2024]
+anos = [2020,2021,2022,2023,2024] # adicionar novo ano só quando tiver mt informação do caged
 
 
 @st.cache_data
