@@ -90,5 +90,7 @@ st.data_editor(
             )
         }
     ),
-    hide_index=False
+    hide_index=False, height=460
 )
+
+st.write('Você pode ordenar a tabela clicando no título da coluna desejada **🔼🔽**')
