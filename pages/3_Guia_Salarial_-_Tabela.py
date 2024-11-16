@@ -48,7 +48,7 @@ df_filtrado = df_filtrado.rename(columns={'CBO Ocupação 2002':'Ocupação (CBO
 
 df_filtrado = df_filtrado.sort_values(by='Salário Mediano', ascending=False).reset_index(drop=True)
 
-st.write(f'<p style="font-size:25px;">Salário Mediano e Salário Médio por Ocupação (CBO) | Ano: {select_ano} | Arapiraca</p>', unsafe_allow_html=True))
+st.write(f'<p style="font-size:25px;">Salário Mediano e Salário Médio por Ocupação (CBO) | Ano: {select_ano} | Arapiraca</p>', unsafe_allow_html=True)
 
 df_style = df_filtrado.style.format(
     {"Salário Médio": lambda x: f"R$ {x:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."),
