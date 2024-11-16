@@ -10,6 +10,8 @@ credentials = service_account.Credentials.from_service_account_info(
 
 client = bigquery.Client(credentials=credentials, project='prefeitura-437123')
 
+ultimo_ano_rais = 2022 # ATUALIZAR SE FOR ADICIONADO NOVA RAIS
+
 st.set_page_config(page_title='Guia Salarial - Tabela', layout='wide')
 st.sidebar.markdown("### Fonte", help=f"""Até {ultimo_ano_rais}: RAIS.  
                                          Após {ultimo_ano_rais}: CAGED.""")
