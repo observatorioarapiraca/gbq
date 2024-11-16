@@ -1,5 +1,10 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title='Observatório Arapiraca', layout='wide'
+)
+
+# o que é o observatorio
 st.subheader('O que é o Observatório de Arapiraca? 🔍' )
 
 st.markdown(
