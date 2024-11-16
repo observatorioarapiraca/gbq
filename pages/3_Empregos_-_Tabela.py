@@ -79,7 +79,7 @@ resultados.loc[condicao, resultados.columns[:3]] = 0
 resultados = resultados.sort_values(by=resultados.columns[2], ascending=False)
 resultados['Variação Estoque de Emprego'] = (((resultados[resultados.columns[2]] / resultados[resultados.columns[0]].replace(0, np.nan)) - 1) * 100).fillna(0).round(2)
 
-st.write(f'<p style="font-size:20px;">Estoque e Saldo de Emprego por Ocupação (CBO) | {data_inicial} até {data_final} | Arapiraca</p>', unsafe_allow_html=True)
+st.write(f'<p style="font-size:25px;">Estoque e Saldo de Emprego por Ocupação (CBO) | {data_inicial} até {data_final} | Arapiraca</p>', unsafe_allow_html=True)
 
 st.data_editor(
     data=resultados,
