@@ -3,6 +3,7 @@ plotly
 streamlit
 pandas-gbq
 google-cloud-bigquery
+google-cloud-storage
 google-auth
 datetime
 numpy
