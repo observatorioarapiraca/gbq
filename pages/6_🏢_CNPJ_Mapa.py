@@ -49,8 +49,8 @@ if not cnpj_filtrado.empty:
     mapa = pdk.Deck(
         map_style="mapbox://styles/mapbox/streets-v11",  # Estilo do mapa
         initial_view_state=pdk.ViewState(
-            latitude=cnpj_filtrado["lat"].mean() -0.009,
-            longitude=cnpj_filtrado["long"].mean(),
+            latitude=-9.752323,
+            longitude=-36.656216,
             zoom=11,  # Ajuste do nível de zoom
             pitch=0,  # Inclinação do mapa
         ),
