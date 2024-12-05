@@ -24,12 +24,16 @@ cnpj["lat"] = pd.to_numeric(cnpj["lat"], errors="coerce")
 cnpj["long"] = pd.to_numeric(cnpj["long"], errors="coerce")
 cnpj = cnpj.dropna(subset=["lat", "long"])
 
+col0, col1 = st.columns([1,5])
+
 periodos = cnpj["data"].unique()
-periodo_selecionado = st.selectbox("Selecione o período:", sorted(periodos))
+with col0:
+    periodo_selecionado = st.selectbox("Selecione o período:", sorted(periodos))
 
 # Seleção do CNAE com a opção "Todos", configurando "Todos" como padrão
 cnae = cnpj["cnae"].unique()
-cnae_selecionado = st.selectbox("Selecione o CNAE:", ["Todos"] + sorted(cnae), index=0)  # "index=0" define "Todos" como padrão
+with col1:
+    cnae_selecionado = st.selectbox("Selecione a Classificação Nacional das Atividades Econômicas (CNAE):", ["Todos"] + sorted(cnae), index=0)  # "index=0" define "Todos" como padrão
 
 # Filtrar o DataFrame com base no período selecionado e CNAE
 if cnae_selecionado == "Todos":
